@@ -1,0 +1,262 @@
+/* ------ CSS - 3D Transform Cube Menu Buttons ------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #e8e8e8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239c0c0c' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    filter: drop-shadow(-1px 6px 3px rgba(133, 133, 133, 0.5));
+    color: #c21f1f;
+    text-align: center;
+    margin-top: 70px;
+}
+.container {
+    position: relative;
+    margin: 100px auto;
+    width: 360px;
+    height: 360px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    padding: 30px;
+}
+.cube_face > i {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.scene > i {
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: black;
+    transition: bottom .3s;
+}
+/* ---- Spinning Icon parameters ---- */
+.scene #html-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #f06529;
+    text-shadow: 0px 1px 0px #41150a;
+    transition: bottom .3s;
+    z-index: 0;
+}
+.scene #css-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #264de4;
+    text-shadow: 0px 1px 0px #0e1d59;
+    transition: bottom .3s;
+}
+.scene #js-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #f0db4f;
+    text-shadow: 0px 1px 0px #59511d;
+    transition: bottom .3s;
+}
+.scene #react-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #61DBFB;
+    text-shadow: 0px 1px 0px #25515c;
+    transition: bottom .3s;
+}
+.scene #boot-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #563d7c;
+    text-shadow: 0px 1px 0px #2e2042;
+    transition: bottom .3s;
+}
+.scene #data-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #115e01;
+    text-shadow: 0px 1px 0px #082b00;
+    transition: bottom .3s;
+}
+.scene #win-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #02a5ff;
+    text-shadow: 0px 1px 0px #013d5e;
+    transition: bottom .3s;
+}
+.scene #wordp-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #21759b;
+    text-shadow: 0px 1px 0px #113c4f;
+    transition: bottom .3s;
+}
+.scene #yout-icon {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #c4302b;
+    text-shadow: 0px 1px 0px #691916;
+    transition: bottom .3s;
+}
+/* ---- Spinning Icon Animation ---- */
+.scene:hover > i {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #html-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #css-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #js-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #react-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #boot-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #data-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #win-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #wordp-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.scene:hover #yout-icon {
+    transform: translate(-50%, 0) rotateY(360deg);
+    bottom: -10px;
+    transition: .3s .2s;
+}
+.cube {
+    transform: translateY(0) translateZ(-100px) rotateX(-20deg) rotateY(20deg);
+}
+.scene {
+    width: 75px;
+    height: 75px;
+    perspective: 500px;
+    margin-left: 8px;
+}
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .3s ease-in;
+}
+.cube_shadow {
+    display: block;
+    position: absolute;
+    width: 75px;
+    height: 40px;
+    filter: blur(10px);
+    bottom: -10px;
+    left: 0;
+    background-color: black;
+    transition: .3s ease-in;
+}
+.scene:hover .cube_shadow {
+    width: 75px;
+    height: 10px;
+    filter: blur(15px);
+    bottom: 0;
+    left: 10px;
+}
+/* ---- Cube Size Control ---- */
+.cube_face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #9c0c0c;
+    opacity: 1;
+    border: 1px solid black;
+}
+.cube_face--back {
+    transform: rotateY(180deg) translateZ(37px);
+    background-color: #520303;
+    z-index: 0;
+}
+.cube_face--right {
+    transform: rotateY(90deg) translateZ(37px);
+    background-color: #992b2b;
+    z-index: 1;
+}
+.cube_face--top {
+    transform: rotateX(90deg) translateZ(37px);
+    background-color: #c21f1f;
+    z-index: 4;
+}
+
+.cube_face--left {
+    transform: rotateY(-90deg) translateZ(37px);
+    background-color: #e63737;
+    z-index: 5;
+}
+.cube_face--front {
+    transform: rotateY(0) translateZ(37px);
+    z-index: 6;
+}
+
+/* ---- Cube Hover Animation ---- */
+.scene:hover .cube {
+    transform: translateY(-40px) translateZ(-100px) rotateX(30deg) rotateY(30deg);
+}
